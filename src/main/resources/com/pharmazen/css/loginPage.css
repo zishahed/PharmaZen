@@ -1,0 +1,75 @@
+/* Background Pane */
+.anchor-pane {
+    -fx-background-color: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+    -fx-background-image: url("/com/pharmazen/images/medical-bg.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: 400px 400px;
+}
+
+/* Title */
+.text {
+    -fx-fill: #01579b;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0.3, 1, 1);
+}
+
+/* Subtext */
+.text:disabled {
+    -fx-fill: #00695c;
+    -fx-font-size: 14px;
+}
+
+/* TextField Input */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #26c6da;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-font-size: 13px;
+    -fx-prompt-text-fill: #90a4ae;
+    -fx-padding: 6 10;
+}
+
+/* Login Button */
+#loginButton {
+    -fx-background-color: linear-gradient(to bottom, #4dd0e1, #00acc1);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-padding: 10 24;
+    -fx-border-color: #00acc1;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0.3, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+#loginButton:hover {
+    -fx-background-color: linear-gradient(to bottom, #26c6da, #0097a7);
+}
+
+#loginButton:pressed {
+    -fx-background-color: #00838f;
+}
+
+/* Hyperlink */
+.hyperlink {
+    -fx-text-fill: #0277bd;
+    -fx-underline: true;
+    -fx-font-size: 13px;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #01579b;
+}
+
+/* Error Message */
+#errorMessage {
+    -fx-fill: red;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}

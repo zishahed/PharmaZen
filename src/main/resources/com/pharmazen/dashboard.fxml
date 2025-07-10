@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="dashboardPane" prefHeight="768.0" prefWidth="1245.0" stylesheets="@css/dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmazen.controllers.Dashboard">
+
+    <VBox maxWidth="-Infinity" prefHeight="768.0" prefWidth="1200.0" spacing="10" styleClass="dashboard-root" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0">
+
+        <!-- Header -->
+        <HBox alignment="CENTER_LEFT" spacing="15" styleClass="header">
+            <ImageView fitHeight="50" fitWidth="50">
+                <Image url="@images/icon.png" />
+            </ImageView>
+            <VBox spacing="5">
+                <Text fx:id="welcomeText" styleClass="welcome-text" text="Welcome back, User!" />
+                <Text styleClass="subheader" text="PharmaZen | Local DB Mode" />
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+        <Button fx:id="authorizeButton" mnemonicParsing="false" onAction="#handleAuthorization" text="Authorize" />
+            <Button fx:id="profileButton" mnemonicParsing="false" onAction="#handleProfile" text="Profile" />
+            <Button fx:id="cartButton" mnemonicParsing="false" onAction="#handleCart" text="Cart" />
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+        </HBox>
+
+        <!-- Search Section -->
+        <HBox spacing="10" styleClass="search-bar">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <TextField fx:id="searchField" promptText="Search medicines..." styleClass="search-field" />
+            <Button onAction="#handleSearch" text="Search by Name" />
+            <Button onAction="#handleGenericSearch" text="Search by Generic" />
+            <Button onAction="#handleRefresh" text="Refresh" />
+        </HBox>
+
+        <!-- Category Buttons -->
+        <HBox spacing="10" styleClass="category-bar">
+            <padding>
+                <Insets left="10" right="10" />
+            </padding>
+            <Button fx:id="allCategoryButton" onAction="#handleCategoryFilter" text="All Medicines" />
+            <Button fx:id="painReliefButton" onAction="#handleCategoryFilter" text="Pain Relief" />
+            <Button fx:id="antibioticsButton" onAction="#handleCategoryFilter" text="Antibiotics" />
+            <Button fx:id="vitaminsButton" onAction="#handleCategoryFilter" text="Vitamins" />
+            <Button fx:id="coldFluButton" onAction="#handleCategoryFilter" text="Cold or Flu" />
+            <Button fx:id="diabetesButton" onAction="#handleCategoryFilter" text="Diabetes" />
+        </HBox>
+
+        <!-- Medicine Grid with Load More button -->
+        <ScrollPane fx:id="medicineScrollPane" fitToWidth="true" prefHeight="580" styleClass="medicine-scroll">
+            <content>
+                <VBox spacing="10" style="-fx-padding: 10;">
+                    <TilePane fx:id="medicineGrid" hgap="15" prefColumns="4" styleClass="medicine-grid" vgap="15" />
+                    <Button fx:id="loadMoreButton" maxWidth="200" styleClass="load-more-button" text="Load More" />
+                </VBox>
+            </content>
+        </ScrollPane>
+
+    </VBox>
+</AnchorPane>

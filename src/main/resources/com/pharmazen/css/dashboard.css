@@ -1,0 +1,236 @@
+/* dashboard.css - Modern Minimal Style */
+
+/* Root container */
+.dashboard-root {
+    -fx-background-color: linear-gradient(to bottom right, #e0f2f1, #ffffff);
+    -fx-padding: 20;
+    -fx-font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    -fx-background-color: #004d40;
+    -fx-padding: 15 30;
+    -fx-alignment: center-left;
+    -fx-spacing: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 5, 0, 0, 2);
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+}
+
+.header .welcome-text {
+    -fx-fill: #a7ffeb;
+    -fx-font-size: 26px;
+    -fx-font-weight: 700;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.15) , 1,0,0,1 );
+}
+
+.header .subheader {
+    -fx-fill: #b2dfdb;
+    -fx-font-size: 14px;
+    -fx-font-weight: 400;
+}
+
+/* Header Buttons */
+.header Button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #a7ffeb;
+    -fx-font-weight: 600;
+    -fx-border-color: transparent;
+    -fx-padding: 8 18;
+    -fx-cursor: hand;
+    -fx-background-radius: 10;
+    -fx-transition: all 0.3s ease;
+}
+
+.header Button:hover {
+    -fx-background-color: #00796b;
+    -fx-text-fill: white;
+}
+
+/* Search Bar */
+.search-bar {
+    -fx-background-color: white;
+    -fx-padding: 12 20;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 8, 0, 0, 2);
+    -fx-alignment: center-left;
+    -fx-spacing: 15;
+}
+
+.search-bar TextField.search-field {
+    -fx-pref-width: 350px;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #80cbc4;
+    -fx-padding: 10 15;
+    -fx-font-size: 14px;
+}
+
+.search-bar Button {
+    -fx-background-color: #00796b;
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+    -fx-padding: 10 22;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0, 0, 1);
+    -fx-transition: background-color 0.25s ease;
+}
+
+.search-bar Button:hover {
+    -fx-background-color: #004d40;
+}
+
+/* Category Buttons */
+.category-bar {
+    -fx-background-color: transparent;
+    -fx-padding: 10 15;
+    -fx-alignment: center-left;
+    -fx-spacing: 12;
+}
+
+.category-button {
+    -fx-background-color: #b2dfdb;
+    -fx-text-fill: #004d40;
+    -fx-font-weight: 600;
+    -fx-padding: 8 18;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.07), 3, 0, 0, 1);
+    -fx-transition: all 0.25s ease;
+}
+
+.category-button:hover {
+    -fx-background-color: #80cbc4;
+    -fx-text-fill: #00251a;
+}
+
+.category-button.active-category {
+    -fx-background-color: #004d40;
+    -fx-text-fill: #a7ffeb;
+    -fx-effect: dropshadow(gaussian, rgba(0, 77, 64, 0.8), 6, 0, 0, 3);
+}
+
+/* ScrollPane */
+.medicine-scroll {
+    -fx-background-color: transparent;
+    -fx-padding: 15;
+}
+
+/* Medicine Grid */
+.medicine-grid {
+    -fx-padding: 10;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+}
+
+/* Medicine Card */
+.medicine-card {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e0f2f1);
+    -fx-border-radius: 18;
+    -fx-background-radius: 18;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 77, 64, 0.12), 8, 0, 0, 3);
+    -fx-spacing: 12;
+    -fx-pref-width: 240;
+    -fx-pref-height: 190;
+    -fx-cursor: default;
+}
+
+.medicine-card Label {
+    -fx-font-weight: 700;
+    -fx-text-fill: #004d40;
+    -fx-font-size: 16px;
+}
+
+.medicine-card Button {
+    -fx-background-color: #00796b;
+    -fx-text-fill: white;
+    -fx-padding: 7 16;
+    -fx-background-radius: 10;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);
+    -fx-transition: background-color 0.3s ease;
+}
+
+.medicine-card Button:hover {
+    -fx-background-color: #004d40;
+}
+
+/* Medicine Card Styling */
+.medicine-card {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e0f2f1);
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-padding: 16;
+    -fx-spacing: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 77, 64, 0.12), 6, 0, 0, 2);
+    -fx-pref-width: 260;
+    -fx-pref-height: Region.USE_COMPUTED_SIZE;
+    -fx-cursor: default;
+}
+
+/* Brand Name */
+.medicine-card .brand-name {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #004d40;
+}
+
+/* Generic Name */
+.medicine-card .generic-name {
+    -fx-font-size: 13px;
+    -fx-text-fill: #555555;
+    -fx-font-style: italic;
+}
+
+/* Manufacturer */
+.medicine-card .manufacturer {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666666;
+}
+
+/* Type and Dosage */
+.medicine-card .category-info {
+    -fx-font-size: 12px;
+    -fx-text-fill: #004d40;
+}
+
+/* Price */
+.medicine-card .price {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #004d40;
+}
+
+/* Stock */
+.medicine-card .stock {
+    -fx-font-size: 12px;
+    -fx-text-fill: #388e3c;
+}
+
+/* Doctor Approval */
+.medicine-card .sensitive-label {
+    -fx-text-fill: red;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+/* Action Buttons */
+.medicine-card Button {
+    -fx-background-color: #00796b;
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+    -fx-padding: 6 14;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0, 0, 1);
+    -fx-transition: background-color 0.2s ease;
+}
+
+.medicine-card Button:hover {
+    -fx-background-color: #004d40;
+}
