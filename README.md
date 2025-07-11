@@ -35,3 +35,12 @@ To address the issue this project adds an special feature: tags the sensitive me
   8. That it!
 # ScreenShots
 ## Login Page 
+![Screenshot of PharmaZen-LoginPage](https://github.com/user-attachments/assets/b8b7c7be-8533-47df-9fe4-c8f7a92f2b86)
+## Registration Page
+![Screenshot of PharmaZen-RegistrationPage](https://github.com/user-attachments/assets/6c79a04e-04f6-4e55-9442-6a089044d484)
+## Dashboard
+![Screenshot of PharmaZen-Dashboard](https://github.com/user-attachments/assets/86daa01d-1891-4ff6-82f7-264e32c10de5)
+## Dashboard for Authorization (Only for Doctors)
+![Screnshot of PharmaZen-Dashboard-Authorization](https://github.com/user-attachments/assets/d1dc5c8f-3ac8-41d0-97f1-df75a4511081)
+## How restricted Medicine Cards look to Other users
+![Screenshot of Restricted Medicines](https://github.com/user-attachments/assets/9384de6b-5f18-4320-a9cd-80536a48b270)
