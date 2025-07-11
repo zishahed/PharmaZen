@@ -44,3 +44,6 @@ To address the issue this project adds an special feature: tags the sensitive me
 ![Screnshot of PharmaZen-Dashboard-Authorization](https://github.com/user-attachments/assets/d1dc5c8f-3ac8-41d0-97f1-df75a4511081)
 ## How restricted Medicine Cards look to Other users
 ![Screenshot of Restricted Medicines](https://github.com/user-attachments/assets/9384de6b-5f18-4320-a9cd-80536a48b270)
+
+# Appreciations
+Of course to chatgpt for making those .css files for me as I got not expertise in that field up until to this day. Used the database of Bangladeshi Medicine from [Kaggle](https://www.kaggle.com/) and to [Ajwad Mohtasim](https://github.com/ajwadmohtasim) for cleaning the databases according to my need.
