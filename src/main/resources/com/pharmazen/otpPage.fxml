@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="otpPane" prefHeight="229.0" prefWidth="418.0" stylesheets="@css/otpPage.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmazen.controllers.OtpPage">
+   <children>
+      <Text layoutX="89.0" layoutY="71.0" styleClass="text" text="Pharma Zen" textAlignment="CENTER">
+         <font>
+            <Font name="High Tower Text Italic" size="40.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="286.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+         <image>
+            <Image url="@images/icon.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="48.0" layoutY="133.0" styleClass="label-text" text="Verify your OTP:" />
+      <TextField fx:id="otpField" layoutX="168.0" layoutY="111.0" prefHeight="34.0" prefWidth="202.0" promptText="enter the 6 digit OTP" />
+      <Hyperlink layoutX="292.0" layoutY="192.0" onAction="#resendOTP" text="Resend OTP" />
+      <Button fx:id="verificationButton" layoutX="173.0" layoutY="164.0" mnemonicParsing="false" onAction="#verifyOTP" text="Verify" />
+      <Text fx:id="messageText" fill="RED" layoutX="7.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="163.137939453125">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

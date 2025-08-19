@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.PasswordField?>
+<AnchorPane fx:id="rootPane" prefHeight="384.0" prefWidth="546.0" stylesheets="@css/loginPage.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmazen.controllers.LoginPage">
+   <children>
+      <Text layoutX="73.0" layoutY="65.0" styleClass="text" text="Welcome to Pharma Zen" textAlignment="CENTER">
+         <font><Font name="High Tower Text Italic" size="40.0" /></font>
+      </Text>
+      <Text layoutX="192.0" layoutY="111.0" styleClass="text" text="Please Login to Continue">
+         <font><Font name="Arial Black" size="12.0" /></font>
+      </Text>
+      <Text layoutX="61.0" layoutY="156.0" styleClass="text" text="Email Address:">
+         <font>
+            <Font name="ArtifaktElement-Thin" size="12.0" />
+         </font></Text>
+      <TextField fx:id="emailField" layoutX="198.0" layoutY="137.0" prefHeight="26.0" prefWidth="298.0" promptText="enter your email" styleClass="text-field" />
+      <Text layoutX="61.0" layoutY="206.0" styleClass="text" text="Password:" />
+      <PasswordField fx:id="passField" layoutX="198.0" layoutY="187.0" prefHeight="26.0" prefWidth="298.0" promptText="enter the password" styleClass="text-field" />
+      <Button fx:id="loginButton" layoutX="218.0" layoutY="242.0" onAction="#handleLogin" styleClass="loginButton" text="Login" />
+      <Text layoutX="167.0" layoutY="350.0" styleClass="text" text="Not Registered yet?" />
+      <Hyperlink fx:id="gotoRegistration" layoutX="298.0" layoutY="333.0" onAction="#handleRegistration" styleClass="hyperlink" text="Register" />
+      <Text fx:id="errorMessage" fill="RED" layoutX="170.0" layoutY="317.0" styleClass="errorMessage" wrappingWidth="183.22735595703125" />
+      <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="452.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

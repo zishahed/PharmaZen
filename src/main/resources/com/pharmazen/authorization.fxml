@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="395.0" prefWidth="666.0" stylesheets="@css/authorization.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmazen.controllers.Authorization">
+
+    <VBox layoutX="46.0" layoutY="111.0" spacing="20" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+
+        <GridPane hgap="10" vgap="15">
+            <Label text="Generic Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="genericField" promptText="e.g., Morphine Sulphate" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="UID to Authorize:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="uidField" promptText="User UID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Validity Period (days):" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+         <DatePicker fx:id="validUntilPicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <Button onAction="#handleAuthorizeSubmit" text="Authorize" />
+    </VBox>
+
+     <Label layoutX="206.0" layoutY="33.0" styleClass="welcome-text" text="Doctor Authorization Panel">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="statusLabel" layoutX="321.0" layoutY="340.0" />
+</AnchorPane>
